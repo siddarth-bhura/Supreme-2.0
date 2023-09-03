@@ -10,6 +10,43 @@ using namespace std;
   5
   */
 
- int main(){
-    return 0;
- }
+int main()
+{
+   int n;
+   cout << "Enter n: ";
+   cin >> n;
+   for (int i = 0; i < n; i++)
+   {
+      if (i == 0)
+      {
+         for (int j = 0; j < n; j++)
+         {
+            cout << j + 1;
+         }
+      }
+      else if (i == n - 1)
+      {
+         cout << i + 1;
+      }
+      else
+      {
+         for (int j = 0; j < n - i; j++)
+         {
+            if (j == 0)
+            {
+               cout << i + 1;
+            }
+            else if (j == n - i - 1)
+            {
+               cout << n;
+            }
+            else
+            {
+               cout << " ";
+            }
+         }
+      }
+      cout << endl;
+   }
+   return 0;
+}
